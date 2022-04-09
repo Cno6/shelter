@@ -1,5 +1,211 @@
-$color: red;
+/* Обнуление стилей */
 
-h1 {
-  color: $color;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  background-color: #fafafa;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ограничивающий контейнер */
+._container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+/* =============== FONTS =================== */
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.eot");
+  src: url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.woff")
+      format("woff"),
+    url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.eot");
+  src: url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.woff")
+      format("woff"),
+    url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot");
+  src: local("Georgia"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot");
+  src: local("Georgia Italic"), local("Georgia-Italic"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot");
+  src: local("Georgia Bold"), local("Georgia-Bold"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* =============== ABSTRACT ================ */
+
+$font-arial: "Arial", sans-serif;
+$font-georgia: "Georgia", serif;
+
+$color-primary: #f1cdb3;
+$color-dark-s: #cdcdcd;
+$color-light-s: #fafafa;
+$color-light-xl: #ffffff;
+
+/* =============== HEADER ================== */
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  z-index: 50;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    min-height: 60px;
+  }
+  &__menu {
+  }
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  &__title {
+    font-family: $font-georgia;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-family: $font-arial;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+  }
+}
+.menu {
+  font-family: $font-arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: $color-dark-s;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &_focused {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+    }
+    &:hover {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+      cursor: pointer;
+    }
+  }
 }
