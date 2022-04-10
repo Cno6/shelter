@@ -229,7 +229,7 @@ $color-dark-3xl: #292929;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: $color-dark-3xl;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 %button-primary-hover {
@@ -244,7 +244,7 @@ $color-dark-3xl: #292929;
   @extend %button-primary;
   border: 2px solid $color-primary;
   background: rgba(0, 0, 0, 0);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 %button-secondary-hover {
@@ -470,7 +470,7 @@ $color-dark-3xl: #292929;
   &__item {
     background-color: $color-light-s;
     max-width: 270px;
-    transition: all 0.5s;
+    transition: all 0.2s;
   }
 }
 
@@ -590,11 +590,15 @@ $color-dark-3xl: #292929;
   padding: 10px 15px;
   background-color: $color-primary;
   border-radius: 9px;
+  transition: 0.2s;
   &__icon {
     margin-right: 15px;
   }
   &__number {
     @extend %h3;
     display: inline;
+  }
+  &:hover {
+    background-color: $color-primary-light;
   }
 }
