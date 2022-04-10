@@ -489,16 +489,20 @@ $color-dark-3xl: #292929;
     cursor: pointer;
     transform: scale(1.1);
   }
-  &:hover &__button {
-    @extend %button-secondary-hover;
-  }
   &__image {
   }
   &__title {
     @extend %pets-item-title;
   }
+  & object {
+    height: 100%;
+  }
   &__button {
     @extend %button-secondary;
+    display: block;
+  }
+  &:hover &__button {
+    @extend %button-secondary-hover;
   }
 }
 
