@@ -637,8 +637,12 @@ $color-dark-3xl: #292929;
     color: $color-light-xl;
   }
   &__item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    transition: 0.2s;
+    &:hover p {
+      color: $color-primary-light;
+    }
   }
   &__item > :not(:last-child) {
     margin-right: 20px;
