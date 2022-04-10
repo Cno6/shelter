@@ -211,6 +211,7 @@ $color-dark-3xl: #292929;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: $color-dark-3xl;
+  transition: 0.5s;
 }
 
 %button-primary-hover {
@@ -225,6 +226,7 @@ $color-dark-3xl: #292929;
   @extend %button-primary;
   border: 2px solid $color-primary;
   background: rgba(0, 0, 0, 0);
+  transition: 0.5s;
 }
 
 %button-secondary-hover {
@@ -234,6 +236,7 @@ $color-dark-3xl: #292929;
 
 %button-arrow {
   content: "";
+  display: inline;
   text-align: center;
   line-height: (52px - 6px);
   width: 52px;
@@ -245,9 +248,7 @@ $color-dark-3xl: #292929;
   margin: 0;
   top: 50%;
   transform: translate(0, -50%);
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 /* =============== BLOCKS ================== */
 .page {
@@ -313,6 +314,7 @@ $color-dark-3xl: #292929;
     flex-wrap: wrap;
   }
   &__item {
+    transition: 0.2s;
     &:not(:last-child) {
       margin-right: 35px;
     }
@@ -420,22 +422,11 @@ $color-dark-3xl: #292929;
     &::before {
       content: "←";
       @extend %button-arrow;
-
-      &:hover {
-        cursor: pointer;
-        border: 2px solid $color-primary-light;
-        background-color: $color-primary-light;
-      }
     }
     &::after {
       content: "→";
       @extend %button-arrow;
       right: 0;
-      &:hover {
-        cursor: pointer;
-        border: 2px solid $color-primary-light;
-        background-color: $color-primary-light;
-      }
     }
   }
   &__button {
@@ -455,7 +446,10 @@ $color-dark-3xl: #292929;
     grid-column-gap: 90px;
   }
   &__item {
+    background-color: $color-light-s;
     max-width: 270px;
+    transition: all 0.5s;
+    
   }
 }
 
@@ -465,8 +459,17 @@ $color-dark-3xl: #292929;
   align-items: center;
   background: $color-light-s;
   border-radius: 9px;
+  height: 435px;
   & > * {
     margin-bottom: 30px;
+  }
+  &:hover {
+    background-color: $color-light-xl;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  &:hover &__button {
+    @extend %button-secondary-hover;
   }
   &__image {
   }
@@ -475,8 +478,6 @@ $color-dark-3xl: #292929;
   }
   &__button {
     @extend %button-secondary;
-    &:hover {
-      @extend %button-secondary-hover;
-    }
+    
   }
 }
