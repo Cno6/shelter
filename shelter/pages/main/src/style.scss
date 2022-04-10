@@ -238,10 +238,6 @@ $color-dark-3xl: #292929;
   &__title {
     @extend %h2;
   }
-  &__text {
-    @extend %paragraph-1;
-    color: $color-dark-xl;
-  }
 }
 
 /* =============== HEADER ================== */
@@ -359,14 +355,16 @@ $color-dark-3xl: #292929;
   }
   &__body {
     width: 430px;
+    & > :not(:last-child) {
+      margin-bottom: 25px;
+    }
   }
-  &__heading > :not(:last-child) {
-    margin-bottom: 25px;
+  &__heading {
   }
   &__title {
-    
   }
   &__text {
-    
+    @extend %paragraph-1;
+    color: $color-dark-xl;
   }
 }
