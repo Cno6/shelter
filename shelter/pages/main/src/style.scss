@@ -157,7 +157,7 @@ $color-light-l: #f6f6f6;
 $color-dark-l: #545454;
 $color-light-s: #fafafa;
 $color-dark-s: #cdcdcd;
-$color-dark-m: #B2B2B2;
+$color-dark-m: #b2b2b2;
 $color-light-xl: #ffffff;
 $color-dark-xl: #4c4c4c;
 $color-dark-3xl: #292929;
@@ -600,5 +600,53 @@ $color-dark-3xl: #292929;
   }
   &:hover {
     background-color: $color-primary-light;
+  }
+}
+
+/* ====================== FOOTER ========================= */
+
+.footer {
+  position: relative;
+  height: 100%;
+  background: no-repeat
+    url("../../../assets/images/footer-block/footer-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 40px;
+  }
+  &__contacts {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.contacts {
+  & > :not(:last-child) {
+    margin-right: 160px;
+  }
+  &__block {
+    margin-top: 16px;
+    min-width: 279px;
+  }
+  &__block > :not(:last-child) {
+    margin-bottom: 37px;
+  }
+  &__heading {
+  }
+  &__title {
+    color: $color-light-xl;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__item > :not(:last-child) {
+    margin-right: 20px;
+  }
+  &__text {
+    @extend %h3;
+    color: $color-primary;
+  }
+  &__image {
   }
 }
