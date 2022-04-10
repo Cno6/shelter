@@ -157,6 +157,7 @@ $color-light-l: #f6f6f6;
 $color-dark-l: #545454;
 $color-light-s: #fafafa;
 $color-dark-s: #cdcdcd;
+$color-dark-m: #B2B2B2;
 $color-light-xl: #ffffff;
 $color-dark-xl: #4c4c4c;
 $color-dark-3xl: #292929;
@@ -206,6 +207,14 @@ $color-dark-3xl: #292929;
   font-family: $font-georgia;
   font-size: 20px;
   line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+%h4 {
+  font-family: $font-georgia;
+  font-size: 15px;
+  line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-dark-l;
 }
@@ -270,11 +279,16 @@ $color-dark-3xl: #292929;
   }
   &__help {
   }
+  &__donation {
+  }
 }
 /* =============== HEADINGS ================ */
 .heading {
   &__title {
     @extend %h2;
+  }
+  &__subtitle {
+    @extend %h4;
   }
 }
 
@@ -493,7 +507,7 @@ $color-dark-3xl: #292929;
 .help {
   &__container {
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 100px - 55px;
   }
   &__heading {
   }
@@ -525,5 +539,58 @@ $color-dark-3xl: #292929;
   }
   &__text {
     @extend %h3;
+  }
+}
+
+/* ============================ DONATION ========================= */
+
+.donation {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 30px;
+  }
+  &__body {
+    max-width: 380px;
+  }
+  &__body > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__heading {
+  }
+  &__heading > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__card {
+  }
+  &__info {
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 12px;
+    line-height: 150%;
+    color: $color-dark-m;
+  }
+}
+.card {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  &__icon {
+    margin-right: 15px;
+  }
+  &__number {
+    @extend %h3;
+    display: inline;
   }
 }
