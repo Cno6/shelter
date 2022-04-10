@@ -152,11 +152,12 @@ $font-georgia: "Georgia", serif;
 
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
+$color-light-l: #f6f6f6;
 $color-dark-l: #545454;
 $color-light-s: #fafafa;
 $color-dark-s: #cdcdcd;
 $color-light-xl: #ffffff;
-$color-dark-xl: #4C4C4C;
+$color-dark-xl: #4c4c4c;
 $color-dark-3xl: #292929;
 
 %logo_title {
@@ -178,6 +179,14 @@ $color-dark-3xl: #292929;
   letter-spacing: 0px;
 }
 
+%pets-item-title {
+  font-family: $font-georgia;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
 %h1 {
   font-family: $font-georgia;
   font-size: 44px;
@@ -192,14 +201,11 @@ $color-dark-3xl: #292929;
   letter-spacing: 0.06em;
 }
 
-%button-primary-form {
+%button-primary {
   padding: 15px 45px;
   text-align: center;
   background: $color-primary;
   border-radius: 100px;
-}
-
-%button-primary-text {
   font-family: $font-georgia;
   font-size: 17px;
   line-height: 130%;
@@ -207,20 +213,41 @@ $color-dark-3xl: #292929;
   color: $color-dark-3xl;
 }
 
-%button-primary-form-hover {
+%button-primary-hover {
+  @extend %button-primary;
   padding: 15px 45px;
   text-align: center;
   background: $color-primary-light;
   border-radius: 100px;
 }
 
-%button-primary {
-  @extend %button-primary-form;
-  @extend %button-primary-text;
+%button-secondary {
+  @extend %button-primary;
+  border: 2px solid $color-primary;
+  background: rgba(0, 0, 0, 0);
 }
-%button-primary-hover {
-  @extend %button-primary-form-hover;
-  @extend %button-primary-text;
+
+%button-secondary-hover {
+  @extend %button-primary-hover;
+  border: 2px solid $color-primary-light;
+}
+
+%button-arrow {
+  content: "";
+  text-align: center;
+  line-height: (52px - 6px);
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  box-sizing: border-box;
+  border-radius: 100px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  &:hover {
+    cursor: pointer;
+  }
 }
 /* =============== BLOCKS ================== */
 .page {
@@ -233,6 +260,8 @@ $color-dark-3xl: #292929;
 .page__about {
 }
 
+.page__pets {
+}
 /* =============== HEADINGS ================ */
 .heading {
   &__title {
@@ -366,5 +395,88 @@ $color-dark-3xl: #292929;
   &__text {
     @extend %paragraph-1;
     color: $color-dark-xl;
+  }
+}
+
+/* ===================== PETS ======================== */
+
+.pets {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    text-align: center;
+  }
+  &__title {
+  }
+  &__slider {
+    position: relative;
+    width: 100%;
+    &::before {
+      content: "←";
+      @extend %button-arrow;
+
+      &:hover {
+        cursor: pointer;
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+    &::after {
+      content: "→";
+      @extend %button-arrow;
+      right: 0;
+      &:hover {
+        cursor: pointer;
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+  &__button {
+    @extend %button-primary;
+    &:hover {
+      @extend %button-primary-hover;
+    }
+  }
+}
+
+.slider {
+  padding: 60px 0;
+  &__items {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 270px);
+    grid-column-gap: 90px;
+  }
+  &__item {
+    max-width: 270px;
+  }
+}
+
+.item-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-light-s;
+  border-radius: 9px;
+  & > * {
+    margin-bottom: 30px;
+  }
+  &__image {
+  }
+  &__title {
+    @extend %pets-item-title;
+  }
+  &__button {
+    @extend %button-secondary;
+    &:hover {
+      @extend %button-secondary-hover;
+    }
   }
 }
