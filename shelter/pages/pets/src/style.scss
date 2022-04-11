@@ -54,6 +54,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Ограничивающий контейнер */
@@ -305,6 +306,11 @@ $color-dark-3xl: #292929;
 /* =============== HEADER ================== */
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-light-xl;
+  z-index: 2;
   &__container {
     padding: 30px 0;
     display: flex;
@@ -365,9 +371,10 @@ $color-dark-3xl: #292929;
 /* ===================== PETS ======================== */
 
 .pets {
+  min-height: 100%;
   background-color: $color-light-l;
   &__container {
-    padding-top: 80px;
+    padding-top: 120 + 80px;
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -451,5 +458,57 @@ $color-dark-3xl: #292929;
   & > [disabled] {
     @extend %button-arrow;
     @extend %button-arrow-disabled;
+  }
+}
+
+/* ====================== FOOTER ========================= */
+
+.footer {
+  position: relative;
+  height: 100%;
+  background: no-repeat
+    url("../../../assets/images/footer-block/footer-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 40px;
+  }
+  &__contacts {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.contacts {
+  & > :not(:last-child) {
+    margin-right: 160px;
+  }
+  &__block {
+    margin-top: 16px;
+    min-width: 279px;
+  }
+  &__block > :not(:last-child) {
+    margin-bottom: 37px;
+  }
+  &__heading {
+  }
+  &__title {
+    color: $color-light-xl;
+  }
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    transition: 0.2s;
+    &:hover p {
+      color: $color-primary-light;
+    }
+  }
+  &__item > :not(:last-child) {
+    margin-right: 20px;
+  }
+  &__text {
+    @extend %h3;
+    color: $color-primary;
+  }
+  &__image {
   }
 }
