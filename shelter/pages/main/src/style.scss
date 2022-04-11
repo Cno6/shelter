@@ -1,0 +1,669 @@
+/* Обнуление стилей */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  background-color: #fafafa;
+  font-style: normal;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ограничивающий контейнер */
+._container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* =============== FONTS =================== */
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.eot");
+  src: url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.woff")
+      format("woff"),
+    url("../../../assets/fonts/Arial/ArialRegular/ArialRegular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.eot");
+  src: url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.woff")
+      format("woff"),
+    url("../../../assets/fonts/Arial/ArialItalic/ArialItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot");
+  src: local("Georgia"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaRegular/Georgia.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot");
+  src: local("Georgia Italic"), local("Georgia-Italic"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot");
+  src: local("Georgia Bold"), local("Georgia-Bold"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.woff")
+      format("woff"),
+    url("../../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* =============== ABSTRACT ================ */
+
+$font-arial: "Arial", sans-serif;
+$font-georgia: "Georgia", serif;
+
+$color-primary: #f1cdb3;
+$color-primary-light: #fddcc4;
+$color-light-l: #f6f6f6;
+$color-dark-l: #545454;
+$color-light-s: #fafafa;
+$color-dark-s: #cdcdcd;
+$color-dark-m: #b2b2b2;
+$color-light-xl: #ffffff;
+$color-dark-xl: #4c4c4c;
+$color-dark-3xl: #292929;
+
+%logo_title {
+  font-family: $font-georgia;
+  font-size: 32px;
+  line-height: 110%;
+}
+
+%logo_subtitle {
+  font-family: $font-arial;
+  font-size: 13px;
+  line-height: 100%;
+}
+
+%paragraph-1 {
+  font-family: $font-arial;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0px;
+}
+
+%pets-item-title {
+  font-family: $font-georgia;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+%h1 {
+  font-family: $font-georgia;
+  font-size: 44px;
+  line-height: 130%;
+}
+
+%h2 {
+  font-family: $font-georgia;
+  font-size: 35px;
+  line-height: 130%;
+  color: $color-dark-l;
+  letter-spacing: 0.06em;
+}
+
+%h3 {
+  font-family: $font-georgia;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+%h4 {
+  font-family: $font-georgia;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+%button-primary {
+  padding: 15px 45px;
+  text-align: center;
+  background: $color-primary;
+  border-radius: 100px;
+  font-family: $font-georgia;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  transition: 0.2s;
+}
+
+%button-primary-hover {
+  @extend %button-primary;
+  padding: 15px 45px;
+  text-align: center;
+  background: $color-primary-light;
+  border-radius: 100px;
+}
+
+%button-secondary {
+  @extend %button-primary;
+  border: 2px solid $color-primary;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2s;
+}
+
+%button-secondary-hover {
+  @extend %button-primary-hover;
+  border: 2px solid $color-primary-light;
+}
+
+%button-arrow {
+  @extend %h3;
+  display: inline-block;
+  text-align: center;
+  line-height: 52px - 6;
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  color: $color-dark-3xl;
+  box-sizing: border-box;
+  border-radius: 100px;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+    transform: scale(1.1);
+  }
+}
+/* =============== BLOCKS ================== */
+.page {
+  flex: 1 1 auto;
+  &__start-screen {
+  }
+  &__about {
+  }
+  &__pets {
+  }
+  &__help {
+  }
+  &__donation {
+  }
+}
+/* =============== HEADINGS ================ */
+.heading {
+  &__title {
+    @extend %h2;
+  }
+  &__subtitle {
+    @extend %h4;
+  }
+}
+
+/* =============== HEADER ================== */
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  z-index: 50;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    min-height: 60px;
+  }
+  &__menu {
+  }
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @extend %logo_title;
+    color: $color-primary;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    @extend %logo_subtitle;
+    color: $color-light-xl;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+}
+.menu {
+  @extend %paragraph-1;
+  color: $color-dark-s;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    transition: 0.2s;
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &_focused {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+    }
+    &:hover {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ================ START SCREEN =================== */
+
+.start-screen {
+  position: relative;
+  min-height: 100%;
+  background: no-repeat
+    url("../../../assets/images/start-screen-page/start-screen-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__body {
+    max-width: 460px;
+    position: relative;
+    margin-top: 163px;
+    z-index: 2;
+    & > :not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+  &__title {
+    @extend %h1;
+    color: $color-light-xl;
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-s;
+    letter-spacing: 0px;
+    text-align: justify;
+  }
+  &__button {
+    display: inline-block;
+    @extend %button-primary;
+    &:hover {
+      @extend %button-primary-hover;
+    }
+  }
+}
+
+/* =================== ABOUT THE SHELTER =================== */
+
+.about {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 120px;
+  }
+  &__body {
+    width: 430px;
+    & > :not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  &__heading {
+  }
+  &__title {
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-xl;
+  }
+}
+
+/* ===================== PETS ======================== */
+
+.pets {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    text-align: center;
+  }
+  &__title {
+  }
+  &__slider {
+  }
+  &__button {
+    @extend %button-primary;
+    &:hover {
+      @extend %button-primary-hover;
+    }
+  }
+}
+
+.slider {
+  padding: 60px 0;
+  width: 100%;
+  &__items {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 270px);
+    grid-column-gap: 90px;
+  }
+  &__item {
+    background-color: $color-light-s;
+    max-width: 270px;
+    transition: all 0.2s;
+  }
+}
+
+.item-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-light-s;
+  border-radius: 9px;
+  height: 435px;
+  & > * {
+    margin-bottom: 30px;
+  }
+  &:hover {
+    background-color: $color-light-xl;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  &__image {
+  }
+  &__title {
+    @extend %pets-item-title;
+  }
+  & object {
+    height: 100%;
+  }
+  &__button {
+    @extend %button-secondary;
+    display: block;
+  }
+  &:hover &__button {
+    @extend %button-secondary-hover;
+  }
+}
+
+.slider-buttons_2 {
+  position: relative;
+  &__buttons_2 {
+  }
+  &__previous {
+    @extend %button-arrow;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
+  }
+  &__next {
+    @extend %button-arrow;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
+  }
+}
+
+/* =============== HELP ========================== */
+
+.help {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px - 55px;
+  }
+  &__heading {
+  }
+  &__title {
+    text-align: center;
+  }
+  &__items {
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1026px + 130px;
+    & > * {
+      margin: 0 60px;
+    }
+    & > * {
+      padding-bottom: 55px;
+    }
+  }
+  &__item {
+  }
+}
+
+.item-help {
+  text-align: center;
+  &__image {
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %h3;
+  }
+}
+
+/* ============================ DONATION ========================= */
+
+.donation {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 30px;
+  }
+  &__body {
+    max-width: 380px;
+  }
+  &__body > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__heading {
+  }
+  &__heading > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__card {
+  }
+  &__info {
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 12px;
+    line-height: 150%;
+    color: $color-dark-m;
+  }
+}
+.card {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  transition: 0.2s;
+  &__icon {
+    margin-right: 15px;
+  }
+  &__number {
+    @extend %h3;
+    display: inline;
+  }
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+/* ====================== FOOTER ========================= */
+
+.footer {
+  position: relative;
+  height: 100%;
+  background: no-repeat
+    url("../../../assets/images/footer-block/footer-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 40px;
+  }
+  &__contacts {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.contacts {
+  & > :not(:last-child) {
+    margin-right: 160px;
+  }
+  &__block {
+    margin-top: 16px;
+    min-width: 279px;
+  }
+  &__block > :not(:last-child) {
+    margin-bottom: 37px;
+  }
+  &__heading {
+  }
+  &__title {
+    color: $color-light-xl;
+  }
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    transition: 0.2s;
+    &:hover p {
+      color: $color-primary-light;
+    }
+  }
+  &__item > :not(:last-child) {
+    margin-right: 20px;
+  }
+  &__text {
+    @extend %h3;
+    color: $color-primary;
+  }
+  &__image {
+  }
+}
