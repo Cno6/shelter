@@ -155,7 +155,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.contacts__text, .card__number, .item-help__text {
+.contacts__text, .card__number, .item-help__text, .slider-buttons_2__next, .slider-buttons_2__previous {
   font-family: "Georgia", serif;
   font-size: 20px;
   line-height: 115%;
@@ -201,21 +201,23 @@ body {
   border: 2px solid #fddcc4;
 }
 
-.pets__slider::after, .pets__slider::before {
-  content: "";
-  display: inline;
+.slider-buttons_2__next, .slider-buttons_2__previous {
+  display: inline-block;
   text-align: center;
   line-height: 46px;
   width: 52px;
   height: 52px;
   border: 2px solid #f1cdb3;
+  color: #292929;
   box-sizing: border-box;
   border-radius: 100px;
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  transition: all 0.2s;
   cursor: pointer;
+}
+.slider-buttons_2__next:hover, .slider-buttons_2__previous:hover {
+  border: 2px solid #fddcc4;
+  background-color: #fddcc4;
+  transform: scale(1.1);
 }
 
 /* =============== BLOCKS ================== */
@@ -343,19 +345,9 @@ body {
 .pets__heading {
   text-align: center;
 }
-.pets__slider {
-  position: relative;
-  width: 100%;
-}
-.pets__slider::before {
-  content: "←";
-}
-.pets__slider::after {
-  content: "→";
-  right: 0;
-}
 .slider {
   padding: 60px 0;
+  width: 100%;
 }
 .slider__items {
   display: grid;
@@ -391,6 +383,22 @@ body {
 .item-slider__button {
   display: block;
 }
+.slider-buttons_2 {
+  position: relative;
+}
+.slider-buttons_2__previous {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 16%;
+}
+.slider-buttons_2__next {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 16%;
+}
+
 /* =============== HELP ========================== */
 .help__container {
   padding-top: 80px;

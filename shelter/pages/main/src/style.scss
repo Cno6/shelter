@@ -253,20 +253,23 @@ $color-dark-3xl: #292929;
 }
 
 %button-arrow {
-  content: "";
-  display: inline;
+  @extend %h3;
+  display: inline-block;
   text-align: center;
-  line-height: (52px - 6px);
+  line-height: 52px - 6;
   width: 52px;
   height: 52px;
   border: 2px solid $color-primary;
+  color: $color-dark-3xl;
   box-sizing: border-box;
   border-radius: 100px;
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  transition: all 0.2s;
   cursor: pointer;
+  &:hover {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+    transform: scale(1.1);
+  }
 }
 /* =============== BLOCKS ================== */
 .page {
@@ -439,17 +442,6 @@ $color-dark-3xl: #292929;
   &__title {
   }
   &__slider {
-    position: relative;
-    width: 100%;
-    &::before {
-      content: "←";
-      @extend %button-arrow;
-    }
-    &::after {
-      content: "→";
-      @extend %button-arrow;
-      right: 0;
-    }
   }
   &__button {
     @extend %button-primary;
@@ -461,6 +453,7 @@ $color-dark-3xl: #292929;
 
 .slider {
   padding: 60px 0;
+  width: 100%;
   &__items {
     display: grid;
     place-content: center;
@@ -503,6 +496,26 @@ $color-dark-3xl: #292929;
   }
   &:hover &__button {
     @extend %button-secondary-hover;
+  }
+}
+
+.slider-buttons_2 {
+  position: relative;
+  &__buttons_2 {
+  }
+  &__previous {
+    @extend %button-arrow;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
+  }
+  &__next {
+    @extend %button-arrow;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
   }
 }
 
