@@ -455,6 +455,9 @@ $color-dark-3xl: #292929;
   & > * {
     @extend %button-arrow;
   }
+  &__current-page {
+    @extend %button-arrow-current;
+  }
   & > [disabled] {
     @extend %button-arrow;
     @extend %button-arrow-disabled;
