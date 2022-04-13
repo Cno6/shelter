@@ -1,0 +1,51 @@
+.item-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-light-s;
+  border-radius: 9px;
+  height: 435px;
+  & > * {
+    margin-bottom: 30px;
+  }
+  &:hover {
+    background-color: $color-light-xl;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  &__image {
+  }
+  &__title {
+    @extend %pets-item-title;
+  }
+  & object {
+    height: 100%;
+  }
+  &__button {
+    @extend %button-secondary;
+    display: block;
+  }
+  &:hover &__button {
+    @extend %button-secondary-hover;
+  }
+}
+
+.slider-buttons_2 {
+  position: relative;
+  &__buttons_2 {
+  }
+  &__previous {
+    @extend %button-arrow;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
+  }
+  &__next {
+    @extend %button-arrow;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 16%;
+  }
+}

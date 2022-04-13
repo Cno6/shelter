@@ -1,0 +1,248 @@
+.page {
+  &__start-screen {
+  }
+  &__about {
+  }
+  &__pets {
+  }
+  &__help {
+  }
+  &__donation {
+  }
+}
+
+/* HEADER */
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  z-index: 50;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    min-height: 60px;
+  }
+}
+
+.menu {
+  @extend %paragraph-1;
+  color: $color-dark-s;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    transition: 0.2s;
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &_focused {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+    }
+    &:hover {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+/* START-SCREEN */
+
+.start-screen {
+  position: relative;
+  min-height: 100%;
+  background: no-repeat
+    url("../../assets/images/start-screen-block/start-screen-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__body {
+    max-width: 460px;
+    position: relative;
+    margin-top: 163px;
+    z-index: 2;
+    & > :not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+  &__title {
+    @extend %h1;
+    color: $color-light-xl;
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-s;
+    letter-spacing: 0px;
+    text-align: justify;
+  }
+  &__button {
+    display: inline-block;
+    @extend %button-primary;
+    &:hover {
+      @extend %button-primary-hover;
+    }
+  }
+}
+
+/* ABOUT THE SHELTER */
+
+.about {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 120px;
+  }
+  &__body {
+    width: 430px;
+    & > :not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  &__heading {
+  }
+  &__title {
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-xl;
+  }
+}
+
+/* PETS */
+
+.pets {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    text-align: center;
+  }
+  &__title {
+  }
+  &__slider {
+  }
+  &__button {
+    @extend %button-primary;
+    &:hover {
+      @extend %button-primary-hover;
+    }
+  }
+}
+
+/* HELP */
+
+.help {
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px - 55px;
+  }
+  &__heading {
+  }
+  &__title {
+    text-align: center;
+  }
+  &__items {
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1026px + 130px;
+    & > * {
+      margin: 0 60px;
+    }
+    & > * {
+      padding-bottom: 55px;
+    }
+  }
+  &__item {
+  }
+}
+
+.item-help {
+  text-align: center;
+  &__image {
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %h3;
+  }
+}
+
+/* DONATION */
+
+.donation {
+  background-color: $color-light-l;
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 30px;
+  }
+  &__body {
+    max-width: 380px;
+  }
+  &__body > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__heading {
+  }
+  &__heading > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__card {
+  }
+  &__info {
+    font-family: $font-arial;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 150%;
+    color: $color-dark-m;
+  }
+}
+.card {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  transition: 0.2s;
+  &__icon {
+    margin-right: 15px;
+  }
+  &__number {
+    @extend %h3;
+    display: inline;
+  }
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
