@@ -1,66 +1,9 @@
-.page {
-  &__start-screen {
-  }
-  &__about {
-  }
-  &__pets {
-  }
-  &__help {
-  }
-  &__donation {
-  }
-}
-
-/* HEADER */
-
-.header {
-  position: absolute;
-  width: 100%;
-  top: 60px;
-  left: 0;
-  z-index: 50;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__logo {
-    min-height: 60px;
-  }
-}
-
-.menu {
-  @extend %paragraph-1;
-  color: $color-dark-s;
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__item {
-    transition: 0.2s;
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
-    &_focused {
-      color: $color-light-s;
-      border-bottom: 3px solid $color-primary;
-    }
-    &:hover {
-      color: $color-light-s;
-      border-bottom: 3px solid $color-primary;
-      cursor: pointer;
-    }
-  }
-}
-
 /* START-SCREEN */
-
 .start-screen {
   position: relative;
   min-height: 100%;
   background: no-repeat
-    url("../../assets/images/start-screen-block/start-screen-background.jpg")
+    url("../assets/images/start-screen-block/start-screen-background.jpg")
     center/cover;
   &__container {
     padding-top: 180px;
@@ -71,7 +14,7 @@
     max-width: 460px;
     position: relative;
     margin-top: 163px;
-    z-index: 2;
+    // z-index: 2;
     & > :not(:last-child) {
       margin-bottom: 42px;
     }
@@ -83,24 +26,14 @@
   &__text {
     @extend %paragraph-1;
     color: $color-dark-s;
-    letter-spacing: 0px;
     text-align: justify;
-  }
-  &__button {
-    display: inline-block;
-    @extend %button-primary;
-    &:hover {
-      @extend %button-primary-hover;
-    }
   }
 }
 
 /* ABOUT THE SHELTER */
-
 .about {
   &__container {
-    padding-top: 80px;
-    padding-bottom: 100px;
+    @include block-padding;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,14 +42,10 @@
     margin-right: 120px;
   }
   &__body {
-    width: 430px;
+    max-width: 430px;
     & > :not(:last-child) {
       margin-bottom: 25px;
     }
-  }
-  &__heading {
-  }
-  &__title {
   }
   &__text {
     @extend %paragraph-1;
@@ -125,12 +54,10 @@
 }
 
 /* PETS */
-
 .pets {
   background-color: $color-light-l;
   &__container {
-    padding-top: 80px;
-    padding-bottom: 100px;
+    @include block-padding;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,24 +65,12 @@
   &__heading {
     text-align: center;
   }
-  &__title {
-  }
-  &__slider {
-  }
-  &__button {
-    @extend %button-primary;
-    &:hover {
-      @extend %button-primary-hover;
-    }
-  }
 }
 
-/* HELP */
-
+// /* HELP */
 .help {
   &__container {
-    padding-top: 80px;
-    padding-bottom: 100px - 55px;
+    @include block-padding($bottom: 100px - 55px);
   }
   &__heading {
   }
@@ -190,13 +105,11 @@
   }
 }
 
-/* DONATION */
-
+// /* DONATION */
 .donation {
   background-color: $color-light-l;
   &__container {
-    padding-top: 80px;
-    padding-bottom: 100px;
+    @include block-padding($top: 77px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,10 +135,8 @@
   &__card {
   }
   &__info {
-    font-family: $font-arial;
-    font-style: italic;
-    font-size: 12px;
-    line-height: 150%;
+    @extend %font-secondary;
+    @include font($size: 1.2rem, $height: 1.5, $style: italic);
     color: $color-dark-m;
   }
 }

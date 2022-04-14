@@ -4,13 +4,15 @@
   &__title {
     @extend %logo_title;
     color: $color-primary;
-    letter-spacing: 0.06em;
     margin-bottom: 10px;
+    transition: all .2s;
+    &:hover {
+      color: $color-primary-light;
+    }
   }
   &__subtitle {
     @extend %logo_subtitle;
     color: $color-light-xl;
     text-align: center;
-    letter-spacing: 0.1em;
   }
 }

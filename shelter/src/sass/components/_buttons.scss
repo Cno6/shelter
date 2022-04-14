@@ -1,0 +1,41 @@
+.button {
+  @include font($size: 1.7rem, $height: 1.3, $spacing: 0.06em);
+  display: inline-block;
+  padding: 15px 45px;
+  text-align: center;
+  border-radius: 100px;
+  color: $color-dark-3xl;
+  transition: background 0.2s;
+  &_colored {
+    background: $color-primary;
+    &:hover {
+      background: $color-primary-light;
+    }
+  }
+  &_bordered {
+    padding: 13px 43px;
+    border: 2px solid $color-primary;
+    background: rgba(0, 0, 0, 0);
+    &:hover {
+      background: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
+  }
+}
+
+
+.button-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  transition: all .2s;
+  &:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+    cursor: pointer;
+  }
+}

@@ -1,21 +1,26 @@
+
+// ABSTRACTS
+@import './abstract/constants';
+@import './abstract/placeholders';
+@import './abstract/mixins';
+
 // BASE
 @import './base/reset';
 @import './base/typography';
-@import './base/constants';
 @import './base/base';
 
-// COMPONENTS
+// // COMPONENTS
+@import './components/logo';
 @import './components/buttons';
 @import './components/headings';
-@import './components/logo';
 @import './components/slider';
 
-// LAYOUT
+// // LAYOUT
 @import './layout/header';
 @import './layout/navigation';
-@import './layout/grid';
 @import './layout/footer';
+// @import './layout/grid';
 
-// PAGES
+// // PAGES
 @import './pages/main';
-@import './pages/pets';
+// @import './pages/pets';

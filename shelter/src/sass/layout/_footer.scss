@@ -2,7 +2,7 @@
   position: relative;
   height: 100%;
   background: no-repeat
-    url("../../../assets/images/footer-block/footer-background.jpg")
+    url("../assets/images/footer-block/footer-background.jpg")
     center/cover;
   &__container {
     padding-top: 40px;
@@ -21,10 +21,8 @@
     margin-top: 16px;
     min-width: 279px;
   }
-  &__block > :not(:last-child) {
-    margin-bottom: 37px;
-  }
   &__heading {
+    margin-bottom: 33px;
   }
   &__title {
     color: $color-light-xl;
@@ -32,9 +30,13 @@
   &__item {
     display: inline-flex;
     align-items: center;
+    min-height: 46px;
     transition: 0.2s;
     &:hover p {
       color: $color-primary-light;
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;  
     }
   }
   &__item > :not(:last-child) {

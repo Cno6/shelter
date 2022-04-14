@@ -1,5 +1,7 @@
 html,
 body {
+  @extend %font-primary;
+  @include font($size: 10px);
   height: 100%;
   scroll-behavior: smooth;
 }
