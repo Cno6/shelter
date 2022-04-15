@@ -38,9 +38,6 @@
   }
   &__image {
   }
-  &__title {
-    @extend %pets-item-title;
-  }
   & object {
     height: 100%;
   }
