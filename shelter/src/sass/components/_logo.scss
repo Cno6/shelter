@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @extend %logo_title;
+    color: $color-primary;
+    margin-bottom: 10px;
+    transition: all .2s;
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+  &__subtitle {
+    @extend %logo_subtitle;
+    color: $color-light-xl;
+    text-align: center;
+  }
+}
+
+.logo_dark {
+  .logo__title {
+    color: $color-dark-l;
+    &:hover {
+      color: $color-dark-3xl;
+    }
+  }
+  .logo__subtitle {
+    color: $color-dark-3xl;
+  }
+}

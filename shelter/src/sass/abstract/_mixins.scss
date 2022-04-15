@@ -1,0 +1,12 @@
+@mixin font ($size: 1.5rem, $height: 1.6, $weight: normal, $style: normal, $spacing: 0) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+  letter-spacing: $spacing;
+}
+
+@mixin block-padding($top: 80px, $bottom: 100px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}

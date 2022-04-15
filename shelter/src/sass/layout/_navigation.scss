@@ -1,0 +1,42 @@
+.menu {
+  @extend %paragraph-1;
+  color: $color-dark-s;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    transition: all 0.2s;
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &_focused {
+      color: $color-light-s;
+      border-bottom: 3px solid $color-primary;
+    }
+    &:hover {
+      color: $color-light-s;
+      cursor: pointer;
+    }
+  }
+}
+
+.menu_dark {
+  color: $color-dark-l;
+  .menu__item {
+    &:hover {
+      color: $color-dark-3xl;
+      cursor: pointer;
+    }
+    &:active {
+      color: $color-dark-l;
+      border-bottom: 3px solid $color-primary;
+      cursor: pointer;
+    }
+    &_focused {
+      color: $color-dark-l;
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+}

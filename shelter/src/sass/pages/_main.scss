@@ -1,0 +1,159 @@
+/* START-SCREEN */
+.start-screen {
+  position: relative;
+  min-height: 100%;
+  background: no-repeat
+    url("../assets/images/start-screen-block/start-screen-background.jpg")
+    center/cover;
+  &__container {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__body {
+    max-width: 460px;
+    position: relative;
+    margin-top: 163px;
+    // z-index: 2;
+    & > :not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+  &__title {
+    @extend %h1;
+    color: $color-light-xl;
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-s;
+    text-align: justify;
+  }
+}
+
+/* ABOUT THE SHELTER */
+.about {
+  &__container {
+    @include block-padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 120px;
+  }
+  &__body {
+    max-width: 430px;
+    & > :not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  &__text {
+    @extend %paragraph-1;
+    color: $color-dark-xl;
+  }
+}
+
+/* PETS */
+.pets {
+  background-color: $color-light-l;
+  &__container {
+    @include block-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    text-align: center;
+  }
+}
+
+// /* HELP */
+.help {
+  &__container {
+    @include block-padding($bottom: 100px - 55px);
+  }
+  &__heading {
+  }
+  &__title {
+    text-align: center;
+  }
+  &__items {
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1026px + 130px;
+    & > * {
+      margin: 0 60px;
+    }
+    & > * {
+      padding-bottom: 55px;
+    }
+  }
+  &__item {
+  }
+}
+
+.item-help {
+  text-align: center;
+  &__image {
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %h3;
+  }
+}
+
+// /* DONATION */
+.donation {
+  background-color: $color-light-l;
+  &__container {
+    @include block-padding($top: 77px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 30px;
+  }
+  &__body {
+    max-width: 380px;
+  }
+  &__body > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__heading {
+  }
+  &__heading > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__card {
+  }
+  &__info {
+    @extend %font-secondary;
+    @include font($size: 1.2rem, $height: 1.5, $style: italic);
+    color: $color-dark-m;
+  }
+}
+.card {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  transition: 0.2s;
+  &__icon {
+    margin-right: 15px;
+  }
+  &__number {
+    @extend %h3;
+    display: inline;
+  }
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}

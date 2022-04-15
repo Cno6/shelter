@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/ArialRegular/ArialRegular.eot");
+  src: url("../assets/fonts/Arial/ArialRegular/ArialRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Arial/ArialRegular/ArialRegular.woff")
+      format("woff"),
+    url("../assets/fonts/Arial/ArialRegular/ArialRegular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/Arial/ArialItalic/ArialItalic.eot");
+  src: url("../../assets/fonts/Arial/ArialItalic/ArialItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/Arial/ArialItalic/ArialItalic.woff")
+      format("woff"),
+    url("../../assets/fonts/Arial/ArialItalic/ArialItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot");
+  src: local("Georgia"),
+    url("../assets/fonts/Georgia/GeorgiaRegular/Georgia.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Georgia/GeorgiaRegular/Georgia.woff")
+      format("woff"),
+    url("../assets/fonts/Georgia/GeorgiaRegular/Georgia.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot");
+  src: local("Georgia Italic"), local("Georgia-Italic"),
+    url("../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.woff")
+      format("woff"),
+    url("../../assets/fonts/Georgia/GeorgiaItalic/Georgia-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot");
+  src: local("Georgia Bold"), local("Georgia-Bold"),
+    url("../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.woff")
+      format("woff"),
+    url("../../assets/fonts/Georgia/GeorgiaBold/Georgia-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+%font-primary {
+  font-family: "Georgia", serif;
+}
+
+%font-secondary {
+  font-family: "Arial", sans-serif;
+}
+
+%logo_title {
+  @include font($size: 3.2rem, $height: 1.1, $spacing: 0.06em);
+}
+
+%logo_subtitle {
+  @extend %font-secondary;
+  @include font($size: 1.3rem, $height: 1.15, $spacing: 0.1em);
+}
+
+%paragraph-1 {
+  @extend %font-secondary;
+  @include font();
+}
+
+.pets-item-title {
+  @include font($size: 2rem, $height: 1.15, $spacing: 0.06em);
+  color: $color-dark-l;
+}
+
+%h1 {
+  @include font($size: 4.4rem, $height: 1.3);
+}
+
+%h2 {
+  @include font($size: 3.5rem, $height: 1.3, $spacing: 0.06em);
+  color: $color-dark-l;
+}
+
+%h3 {
+  @include font($size: 2rem, $height: 1.15, $spacing: 0.06em);
+  color: $color-dark-l;
+}
+
+%h4 {
+  @include font($size: 1.5rem, $height: 1.1, $spacing: 0.06em);
+  color: $color-dark-l;
+}
