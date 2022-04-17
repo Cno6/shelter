@@ -423,6 +423,7 @@ body {
 }
 .contacts__block {
   margin-top: 16px;
+  max-width: 302px;
   min-width: 279px;
 }
 .contacts__heading {
@@ -461,8 +462,10 @@ body {
     justify-content: center;
     padding: 0 34px;
   }
+  .footer .contacts > * {
+    flex: 1 0 50%;
+  }
   .footer .contacts > :not(:last-child) {
-    flex: 1 1 302px;
     margin-right: 0;
   }
   .footer .contacts__block {
@@ -472,6 +475,7 @@ body {
     margin-left: 36px;
   }
   .footer .contacts__image {
+    text-align: center;
     margin-top: 57px;
   }
 }
