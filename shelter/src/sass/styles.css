@@ -368,11 +368,6 @@ body {
   color: #292929;
   cursor: pointer;
 }
-.menu_dark .menu__item:active {
-  color: #545454;
-  border-bottom: 3px solid #f1cdb3;
-  cursor: pointer;
-}
 .menu_dark .menu__item_focused {
   color: #545454;
   border-bottom: 3px solid #f1cdb3;
@@ -446,6 +441,10 @@ body {
   background-color: #ffffff;
   cursor: pointer;
   transform: scale(1.05);
+}
+.grid__item:hover .button_bordered {
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 .grid__item object {
   height: 100%;

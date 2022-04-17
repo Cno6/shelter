@@ -20,6 +20,10 @@
     background-color: $color-light-xl;
     cursor: pointer;
     transform: scale(1.05);
+    .button_bordered {
+      background: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
   }
   &__image {
   }
