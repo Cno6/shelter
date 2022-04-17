@@ -49,3 +49,33 @@
   &__image {
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .footer {
+    background: no-repeat
+    url("../assets/images/footer-block/footer-background.jpg")
+    cover;
+    &__container {
+      padding-top: 30px;
+    }
+
+    .contacts {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 34px;
+      & > :not(:last-child) {
+        flex: 1 1 302px;
+        margin-right: 0;
+      }
+      &__block {
+        margin-top: 0;
+        &:not(:first-child) {
+          margin-left: 36px;
+        }
+      }
+      &__image {
+        margin-top: 57px;
+      }
+    }
+  }
+}

@@ -20,6 +20,12 @@ body {
   box-sizing: content-box;
 }
 
+@media screen and (max-width: 1279px) {
+  ._container {
+    padding: 0 30px;
+  }
+}
+
 ._ibg {
   position: relative;
 }

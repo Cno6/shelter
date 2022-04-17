@@ -42,3 +42,28 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .slider__elements {
+    display: grid;
+    place-content: center;
+    align-items: center;
+    grid-template-columns: 52px 580px 52px;
+    grid-column-gap: 12px;
+  }
+
+  .slider__items {
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .item-slider {
+    &:hover {
+      transform: scale(1);
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
+}
