@@ -40,3 +40,20 @@
     margin-right: 20px;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    max-height: 435px * 3 + 30px * 2 + 10px;
+    overflow-y: hidden;
+  }
+  .grid__buttons {
+    margin-top: 28px;
+    & > :not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
