@@ -35,3 +35,9 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .menu__list {
+    display: none;
+  }
+}

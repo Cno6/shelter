@@ -23,7 +23,9 @@
   }
 }
 
-@media screen and (max-width: 1279px) {
+
+
+@media screen and (max-width: ($screen-wide - 1)) {
   .header {
     top: 30px;
   }

@@ -67,3 +67,35 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .slider {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  
+  .slider__elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .button-arrow {
+      margin-top: 20px;
+      order: 2;
+    }
+  }
+
+  .slider__items {
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .item-slider {
+    &:hover {
+      transform: scale(1);
+    }
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}

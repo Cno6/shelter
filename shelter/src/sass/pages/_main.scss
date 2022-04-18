@@ -135,7 +135,12 @@
   }
   &__info {
     @extend %font-secondary;
-    @include font($size: 1.2rem, $height: 1.5, $style: italic, $spacing: -0.16px);
+    @include font(
+      $size: 1.2rem,
+      $height: 1.5,
+      $style: italic,
+      $spacing: -0.16px
+    );
     color: $color-dark-m;
   }
 }
@@ -219,13 +224,135 @@
 
   .donation {
     &__container {
-    flex-direction: column;
+      flex-direction: column;
     }
     &__image {
       margin-top: 60px;
       margin-right: 0px;
       order: 2;
     }
+  }
+}
 
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .menu__list {
+    display: none;
+  }
+
+  .start-screen {
+    &__title {
+      @include font($size: 2.5rem, $height: 1.3, $spacing: 0.06em);
+      text-align: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    &__image {
+      margin-top: 105px;
+      width: 74%;
+      min-width: 260px;
+      height: auto;
+      align-self: flex-end;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .about {
+    &__container {
+      @include block-padding(42px, 42.4px);
+    }
+    &__title {
+      text-align: center;
+    }
+    &__image {
+      margin-top: 42px;
+      img {
+        width: 260px;
+        height: 100%;
+      }
+    }
+    &__body {
+      min-width: auto;
+      margin: 0 15px;
+      text-align: justify;
+      & > :not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+    &__text {
+      @extend %paragraph-1;
+      color: $color-dark-xl;
+    }
+  }
+
+  .pets {
+    &__container {
+      @include block-padding(42px, 42px);
+    }
+  }
+
+  .help {
+    &__container {
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
+  }
+
+  .help__items {
+    padding: 42px 5px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-gap: 30px;
+  }
+
+  .item-help {
+    text-align: center;
+    &__image {
+      margin-bottom: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &__text {
+      @include font($size: 1.5rem, $height: 1.1, $spacing: 0.06em)
+    }
+  }
+
+  .donation {
+    &__container {
+      @include block-padding(42px, 42px);
+    }
+    &__body {
+      text-align: center;
+    }
+    &__subtitle {
+      letter-spacing: 0;
+    }
+    &__body > :not(:last-child) {
+      margin-bottom: 25px;
+    }
+    &__info {
+      text-align: justify;
+      margin: 0 9px;
+    }
+    &__image {
+      margin-top: 42px;
+      img {
+        width: 260px;
+      }
+    }
+  }
+  .card {
+    margin: 20px 9px;
+    display: flex;
+    align-items: center;
+  }
+  .card__number {
+    @include font($size: 1.5rem, $height: 1.1, $spacing: 0.06em)
   }
 }
