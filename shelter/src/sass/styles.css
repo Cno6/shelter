@@ -411,6 +411,9 @@ body {
   .header_fixed {
     top: 0;
   }
+  .header_fixed .header__container {
+    padding: 30px 10px;
+  }
 }
 .menu {
   color: #cdcdcd;
@@ -610,6 +613,25 @@ body {
   }
   .grid__buttons > :not(:last-child) {
     margin-right: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, 270px);
+    grid-template-rows: repeat(3, 435px);
+    max-height: 1365px;
+    overflow-y: hidden;
+  }
+
+  .grid__buttons {
+    margin-top: 42px;
+  }
+  .grid__buttons > :not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .grid__item:hover {
+    transform: scale(1);
   }
 }
 /* START-SCREEN */
@@ -974,6 +996,15 @@ body {
 
   .pets-page__container {
     padding-bottom: 76px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .pets-page__container {
+    padding-top: 162px;
+    padding-bottom: 42px;
+  }
+  .pets-page__grid {
+    padding-top: 42px;
   }
 }
 

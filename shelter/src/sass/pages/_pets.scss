@@ -34,3 +34,15 @@
     padding-bottom: 76px;
   }
 }
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .pets-page {
+    &__container {
+      padding-top: 120 + 42px;
+      padding-bottom: 42px;
+    }
+    &__grid {
+      padding-top: 42px;
+    }
+  }
+}

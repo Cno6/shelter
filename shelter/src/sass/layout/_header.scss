@@ -31,5 +31,8 @@
   }
   .header_fixed {
     top: 0;
+    .header__container {
+      padding: 30px 10px;
+    }
   }
 }

@@ -57,3 +57,23 @@
     }
   }
 }
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .grid {
+    grid-template-columns: repeat(1, 270px);
+    grid-template-rows: repeat(3, 435px);
+    max-height: 1365px;
+    overflow-y: hidden;
+  }
+  .grid__buttons {
+    margin-top: 42px;
+    & > :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .grid__item {
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
