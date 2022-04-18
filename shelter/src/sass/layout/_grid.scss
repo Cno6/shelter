@@ -20,6 +20,10 @@
     background-color: $color-light-xl;
     cursor: pointer;
     transform: scale(1.05);
+    .button_bordered {
+      background: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
   }
   &__image {
   }
@@ -34,5 +38,42 @@
   margin-top: 60px;
   & > :not(:last-child) {
     margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    max-height: 435px * 3 + 30px * 2 + 10px;
+    overflow-y: hidden;
+  }
+  .grid__buttons {
+    margin-top: 28px;
+    & > :not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .grid {
+    grid-template-columns: repeat(1, 270px);
+    grid-template-rows: repeat(3, 435px);
+    max-height: 1365px;
+    overflow-y: hidden;
+  }
+  .grid__buttons {
+    margin-top: 42px;
+    & > :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .grid__item {
+    &:hover {
+      transform: scale(1);
+    }
   }
 }

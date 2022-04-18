@@ -36,3 +36,14 @@ body {
 .page {
   flex: 1 1 auto;
 }
+
+@media screen and (max-width: ($screen-wide - 1)) {
+  ._container {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  ._container {
+    padding: 0 10px;
+  }
+}

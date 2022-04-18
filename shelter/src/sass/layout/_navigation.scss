@@ -29,14 +29,15 @@
       color: $color-dark-3xl;
       cursor: pointer;
     }
-    &:active {
-      color: $color-dark-l;
-      border-bottom: 3px solid $color-primary;
-      cursor: pointer;
-    }
     &_focused {
       color: $color-dark-l;
       border-bottom: 3px solid $color-primary;
     }
+  }
+}
+
+@media screen and (min-width: $screen-mobile) and (max-width: ($screen-tablet - 1)) {
+  .menu__list {
+    display: none;
   }
 }
