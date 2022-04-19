@@ -372,6 +372,7 @@ body {
   .slider__items {
     justify-content: space-evenly;
     gap: 40px;
+    flex: 1 0 100%;
   }
 
   .item-slider:hover {
