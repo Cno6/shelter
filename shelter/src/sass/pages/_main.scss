@@ -150,6 +150,8 @@
   background-color: $color-primary;
   border-radius: 9px;
   transition: 0.2s;
+  width: fit-content;
+  margin: 0 auto;
   &__icon {
     margin-right: 15px;
   }
@@ -348,7 +350,6 @@
     }
   }
   .card {
-    margin: 20px 9px;
     display: flex;
     align-items: center;
   }
